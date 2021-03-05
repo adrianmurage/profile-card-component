@@ -1,35 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Victor Crest
-  26
-  London
+    <title>Frontend Mentor | Profile card component</title>
 
-  80K
-  Followers
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      /* * {
+        outline: solid red;
+      } */
+      @font-face {
+        font-family: "Kumbh Sans";
+        src: url(https://fonts.google.com/specimen/Kumbh+Sans);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: hsl(185, 75%, 39%);
+        font-family: "Kumbh Sans", sans-serif;
+      }
 
-  803K
-  Likes
+      .card {
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 330px;
+        border-radius: 1rem;
+        background-color: white;
+      }
+      .header {
+        height: 125px;
+        background-image: url("images/bg-pattern-card.svg");
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        margin-bottom: 70px;
+      }
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      #avatar {
+        background-color: white;
+        position: relative;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 105px;
+        height: 105px;
+      }
+      .personal-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .stats-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .stats {
+        padding: 20px;
+        text-align: center;
+      }
+      hr {
+        height: 0.01px;
+      }
+      img {
+        border-radius: 50%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .name,
+      .stats-figures {
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      .name-age {
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <header class="header">
+        <div id="avatar">
+          <img src="images/image-victor.jpg" alt="avatar" />
+        </div>
+      </header>
+      <div class="personal-details">
+        <div class="name-age">
+          <div class="name">Victor Crest</div>
+          <div class="age">26</div>
+        </div>
+
+        <div class="country">London</div>
+      </div>
+
+      <hr />
+      <div class="stats-container">
+        <div class="stats">
+          <div class="stats-figures">80K</div>
+          <div class="stats-label">Followers</div>
+        </div>
+
+        <div class="stats">
+          <div class="stats-figures">803K</div>
+          <div class="stats-label">Likes</div>
+        </div>
+        <div class="stats">
+          <div class="stats-figures">1.4K</div>
+          <div class="stats-label">Photos</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/adrianmurage">@adrianmurage</a>.
+    </div>
+  </body>
 </html>
